@@ -28,3 +28,10 @@ jobs:
         working-directory: './04 Practice Project (Start)/src/test'
       - name: Deploy code
         run: echo "Deploying..."
+  output-info:
+        runs-on: ubuntu-latest
+        steps:
+            - name: get code
+              uses: actions/checkout@v3
+            - name: showing github output
+              run: echo "${{ toJson(github) }}""
